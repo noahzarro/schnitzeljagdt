@@ -1,16 +1,69 @@
-<!DOCTYPE html>
-<html>
-<header>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="schnitzel.css">
     <script src="schnitzel.js"></script>
-</header>
+    <title>Schnitzeljagdt</title>
+</head>
 
 <body>
-    <h1>
-        Schnitzeljagdt
-    </h1>
-    <label>Gib do dis Passwort ii:</label>
-    <input id="keyword">
-    <button onclick="test()">Kontrolliere</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="ronja.png" alt="ronja" style="max-width: 50%;">
+            </div>
+            <div class="col-md-6">
+                <div style="padding-top: 30%;">
+
+                </div>
+                <div class="title">
+                    <h1>
+                        Schnitzeljagdt
+                    </h1>
+                </div>
+                <br>
+                <div style="justify-content: center;">
+                    <input id="keyword">
+                    <button onclick="test()">Kontrolliere</button>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="title">
+                    <h1>
+                        Wiiteri Awiisige:
+                    </h1>
+                    <ul class="list-group" id="todo2" style="display: none;">
+                        <!--Jo Lano du hesches usegfunde, und d Lösig stoot wieder mol eifach im source code ;)-->
+                        <li class="list-group-item">Gang uf <a href="https://issuu.com/az-anzeiger/docs/woche_21c/15" target="_blank">die Siite</a></li>
+                        <li class="list-group-item">Lueg d Ziitig uf Siite 15 a (sie sött scho offe sii)</li>
+                        <li class="list-group-item">Find use was de Kendal d Chindergärtler errote loot</li>
+                        <li class="list-group-item">Gang uf
+                            <a href="http://www.unendlich-leben.de/" target="_blank">die Siite</a>
+                        </li>
+                        <li class="list-group-item">Gib do im Suechfeld de begriff i wod bim Kendal gfunde hesch</li>
+                        <li class="list-group-item">Wennd Elbenzauber gfunde hesch bisch richtig (do müssts ez irgnedwie wiiter goo)</li>
+                    </ul>
+                    <ul class="list-group" id="todo1">
+                        <li class="list-group-item">Gib s richtige Passwort ii, und druck Kontrolliere</li>
+                    </ul>
+                </div>
+                <audio id="maballs">
+                    <source src="ma_balls.mp3">
+                    </source>
+                </audio>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 
 </html>

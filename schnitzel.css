@@ -1,0 +1,19 @@
+body {
+    background-image: url("parchment.jpg");
+}
+
+.col {
+    justify-content: center;
+}
+
+.title {
+    background-image: url("wood.jpg");
+    text-align: center;
+    color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.list-group {
+    color: black;
+}

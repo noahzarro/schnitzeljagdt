@@ -3,7 +3,11 @@ function test() {
     if (keyword == "Lano") {
         alert("Artscholocco, das isch jo es grässlichs Wort");
     } else if (keyword == "Arschwasser") {
-        alert("Richtig! S Passwort isch: 'Hello I'm Vegan'");
+        // Jo Lano du hesches usegfunde, und d Lösig stoot wieder mol eifach im source code ;)
+        audio = document.getElementById('maballs')
+        audio.play();
+        document.getElementById('todo2').style.display = "inline"
+        document.getElementById('todo1').style.display = "none"
     } else {
         alert("S Wort isch falsch gsi...");
     }
