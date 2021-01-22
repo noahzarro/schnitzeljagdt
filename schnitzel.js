@@ -1,13 +1,15 @@
 function test() {
-    let keyword = document.getElementById("keyword").value
-    if (keyword == "Lano") {
-        alert("Artscholocco, das isch jo es grässlichs Wort");
-    } else if (keyword == "Arschwasser") {
+    $(".list-group").css("display", "none");
+    let keyword = $("#keyword").val()
+    console.log(keyword)
+    let element = $("#" + keyword)
+    console.log(element)
+    console.log(element.length)
+    if (element.length == 1) {
         // Jo Lano du hesches usegfunde, und d Lösig stoot wieder mol eifach im source code ;)
         audio = document.getElementById('maballs')
         audio.play();
-        document.getElementById('todo2').style.display = "inline"
-        document.getElementById('todo1').style.display = "none"
+        $("#" + keyword).css("display", "inline");
     } else {
         alert("S Wort isch falsch gsi...");
     }

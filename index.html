@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="schnitzel.css">
     <link rel="icon" type="image/png" href="favicon.ico">
@@ -39,19 +39,89 @@
                     <h1>
                         Wiiteri Awiisige:
                     </h1>
-                    <ul class="list-group" id="todo2" style="display: none;">
-                        <!--Jo Lano du hesches usegfunde, und d Lösig stoot wieder mol eifach im source code ;)-->
-                        <li class="list-group-item">Gang uf <a href="https://issuu.com/az-anzeiger/docs/woche_21c/15" target="_blank">die Siite</a></li>
-                        <li class="list-group-item">Lueg d Ziitig uf Siite 15 a (sie sött scho offe sii)</li>
-                        <li class="list-group-item">Find use was de Kendal d Chindergärtler errote loot</li>
-                        <li class="list-group-item">Gang uf
-                            <a href="http://www.unendlich-leben.de/" target="_blank">die Siite</a>
-                        </li>
-                        <li class="list-group-item">Gib do im Suechfeld de begriff i wod bim Kendal gfunde hesch</li>
-                        <li class="list-group-item">Wennd Elbenzauber gfunde hesch bisch richtig (do müssts ez irgnedwie wiiter goo)</li>
+                    <ul class="list-group" id="start">
+                        <li class="list-group-item">Gib s Passwort ii und druck uf Kontrolliere</li>
                     </ul>
-                    <ul class="list-group" id="todo1">
-                        <li class="list-group-item">Gib s richtige Passwort ii, und druck Kontrolliere</li>
+                    <ul class="list-group" id="Jana" style="display: none;">
+                        <!--Jo Lano du hesches usegfunde, und d Lösig stoot wieder mol eifach im source code ;)-->
+                        <li class="list-group-item">Da hast du dir eine sehr gute Kickbocks-Träne ausgewählt!</li>
+                        <li class="list-group-item"> Jana erklärt dir den wichtigsten Grundsatz und spricht: «Be water, my friend... and du bisch ja no grüsiger wie i! Drum spring weg vo dim Kompi und suech dir e möglichst dummi Kampf-Verkleidig, mindestens e Chopfbedeckig, jetzt!
+                            (wie wärs mit Schminki? Du hesch sicher no e schlechteri Idee!)</li>
+                        <li class="list-group-item">Sitz ab jetzt verkleidet vorem Kompi und seg mir wennd «ready» bisch.
+                        </li>
+                    </ul>
+                    <ul class="list-group" id="ready" style="display: none;">
+                        <li class="list-group-item">Sehr guet! Ich bin au pirat! Los gat s Training!</li>
+                        <li class="list-group-item">Stahn uf!</li>
+                        <li class="list-group-item">Jetzt nim dir zwei Minute Ziet zum e unterhaltsami Kickbox- Üebig usdenke wod spöter de andere chasch biibringe. Wennd das hesch, denn gib mir es «Zeiche».</li>
+                    </ul>
+                    <ul class="list-group" id="Zeiche" style="display: none;">
+                        <li class="list-group-item">Sehr guet! Die Üebig gfallt mir!</li>
+                        <li class="list-group-item"> Hmm, zrug uf de Kickbox-Website... Klick uf de Sponsor wo üs am eheste en Hiiwis chönnt geh uf üsere Schnitzeljagd. </li>
+                        <li class="list-group-item"> Endlich simmer dem Vegi-Schnitzeli uf de Spur. Gang uf Kontakt. Wenn du Vegi bisch, denn nutze s Kontaktformular zum frage öb sie au Vegischnitzeli verkaufed und schicks ab. </li>
+                        <li class="list-group-item">Fleisch gibt Kraft und ______!</li>
+                    </ul>
+                    <ul class="list-group" id="Lebensfreude" style="display: none;">
+                        <li class="list-group-item">Glaubsch ja selber nöd... ischs nöd eher (fast) s’Gegeteil?</li>
+                    </ul>
+                    <ul class="list-group" id="Tod" style="display: none;">
+                        <li class="list-group-item">Richtig! Nun eine letzte Vorbereitung. Für den Fall der Fälle möchten wir eine Friedenspfeiffe kaufen. Höre dir <a href="https://www.youtube.com/watch?v=NUYvbT6vTPs" target="_blank">indianische
+                            Musik</a> an, während du <a href="http://www.rainbowtrading.ch/index.html" target="_blank"> diesen Shop</a>durchstöberst. </li>
+                        <li class="list-group-item"> Wir möchten genau 454 Fr. ausgeben. Wie heisst die Pfeiffe die wir kaufen?</li>
+                    </ul>
+                    <ul class="list-group" id="Pain Eagle" style="display: none;">
+                        <li class="list-group-item">Jetzt sind wir sehr gut vorbereitet! Nur noch kurz das Schwert einpacken von Haleph. Suche im Pergament nach dem Schwert.</li>
+                    </ul>
+                    <ul class="list-group" id="Haleph" style="display: none;">
+                        <li class="list-group-item">Haleph: «Ihr habt es bereits bis hier hin geschafft! Super!» </li>
+                        <li class="list-group-item">Leider hat Hook doch nicht alle Räuber gefangen, plötzlich wimmelt es wieder von bösen Räubern. Bevor der Kampf losgeht, schaue <a href="https://www.youtube.com/watch?v=gqC2maskGR4" target="_blank">in diesem Video</a>wie du Haleph
+                            das Schwert überreichst.</li>
+                        <li class="list-group-item">Nun begebe dich in den <a href="https://meet.jit.si/rümli" target="_blank"> Kampf</a>!</li>
+                    </ul>
+                    <ul class="list-group" id="Scio" style="display: none;">
+                        <li class="list-group-item">iggitigit!</li>
+                    </ul>
+                    <ul class="list-group" id="Olympia" style="display: none;">
+                        <li class="list-group-item">schön bisch da! J</li>
+                    </ul>
+                    <ul class="list-group" id="Viva" style="display: none;">
+                        <li class="list-group-item">High five! J</li>
+                    </ul>
+                    <ul class="list-group" id="Mika" style="display: none;">
+                        <li class="list-group-item">Jey, toll bisch debi! J</li>
+                    </ul>
+                    <ul class="list-group" id="Galilea" style="display: none;">
+                        <li class="list-group-item">Jey, super bisch debi! J</li>
+                    </ul>
+                    <ul class="list-group" id="Diala" style="display: none;">
+                        <li class="list-group-item">Jey, bravo, du bisch debi! J</li>
+                    </ul>
+                    <ul class="list-group" id="Proton" style="display: none;">
+                        <li class="list-group-item">My baaalls, my baaalls, suck on my baaaaalls!</li>
+                    </ul>
+                    <ul class="list-group" id="Jaku" style="display: none;">
+                        <li class="list-group-item">Jummy!</li>
+                    </ul>
+                    <ul class="list-group" id="Quasli" style="display: none;">
+                        <li class="list-group-item">wääääää</li>
+                    </ul>
+                    <ul class="list-group" id="Siamo" style="display: none;">
+                        <li class="list-group-item">Siamo nella cacca fino al collo</li>
+                    </ul>
+                    <ul class="list-group" id="Katara" style="display: none;">
+                        <li class="list-group-item">Katharsis (altgriechisch κάθαρσις „Reinigung“) bezeichnet in der Psychologie die Hypothese, dass das Ausleben innerer Konflikte und verdrängter Emotionen zu einer Reduktion dieser Konflikte und Gefühle führt.</li>
+                    </ul>
+                    <ul class="list-group" id="Silencio" style="display: none;">
+                        <li class="list-group-item">oh, en Roverleiter!</li>
+                    </ul>
+                    <ul class="list-group" id="Neon" style="display: none;">
+                        <li class="list-group-item">du dickes fettes Schwein!</li>
+                    </ul>
+                    <ul class="list-group" id="Calmo" style="display: none;">
+                        <li class="list-group-item">fantastisch!</li>
+                    </ul>
+                    <ul class="list-group" id="Questo" style="display: none;">
+                        <li class="list-group-item">Guuuuuuuuuäschtoooooo!</li>
                     </ul>
                 </div>
                 <audio id="maballs">
