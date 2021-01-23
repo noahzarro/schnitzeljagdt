@@ -1,6 +1,6 @@
 function test() {
     $(".list-group").css("display", "none");
-    let keyword = $("#keyword").val()
+    let keyword = $("#keyword").val().replace(" ", "_")
     console.log(keyword)
     let element = $("#" + keyword)
     console.log(element)
